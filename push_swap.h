@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:46:34 by oalhasan          #+#    #+#             */
-/*   Updated: 2025/12/30 16:51:58 by oalhasan         ###   ########.fr       */
+/*   Updated: 2025/12/30 18:42:19 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,7 @@ void	print_stack(t_stack *stack);
 void sort_two(t_stack *stack);
 void sort_three(t_stack *stack);
 void sort_small(t_stack *stack);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 
 #endif
