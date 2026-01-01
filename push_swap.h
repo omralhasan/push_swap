@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:46:34 by oalhasan          #+#    #+#             */
-/*   Updated: 2025/12/30 18:42:19 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/01 19:54:18 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,34 +18,37 @@
 #include <stdio.h>
 typedef struct sorted_list
 {
-   	int				value;   
-	int				index; 
+       int				value;   
+    int				index; 
     struct sorted_list   *next;
 }                   sorted_list;
 
 typedef struct s_stack
 {
-	sorted_list	*top;
-	int		size;
+    sorted_list	*top;
+    int		size;
 }	t_stack;
 
-void    sa(sorted_list **a);
-void    sb(sorted_list **b);
-void    ss(sorted_list **a, sorted_list **b);
-void    pa(sorted_list **a, sorted_list **b);
-void    pb(sorted_list **a, sorted_list **b);
-void    ra(sorted_list **a);
-void    rb(sorted_list **b);
-void    rr(sorted_list **a, sorted_list **b);
-void    rra(sorted_list **a);
-void    rrb(sorted_list **b);
-void    rrr(sorted_list **a, sorted_list **b);
+/* Use t_stack * consistently for stack operations */
+void    sa(t_stack *a);
+void    sb(t_stack *b);
+void    ss(t_stack *a, t_stack *b);
+void    pa(t_stack *a, t_stack *b);
+void    pb(t_stack *a, t_stack *b);
+void    ra(t_stack *a);
+void    rb(t_stack *b);
+void    rr(t_stack *a, t_stack *b);
+void    rra(t_stack *a);
+void    rrb(t_stack *b);
+void    rrr(t_stack *a, t_stack *b);
+
 char	**ft_split(char const *s, char c);
 void	error_exit();
 void	error_free(char **args);
 int	is_valid_number(char *str);
 void	validate_args(char **args);
-void    push(t_stack *stack, t_stack *to);
+
+void    push(t_stack *from, t_stack *to);
 int     pop(t_stack *stack);
 int	    is_sorted(t_stack *stack);
 void    free_stack(t_stack *stack);
@@ -62,6 +65,9 @@ void sort_two(t_stack *stack);
 void sort_three(t_stack *stack);
 void sort_small(t_stack *stack);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 
 #endif

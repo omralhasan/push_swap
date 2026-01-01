@@ -7,6 +7,10 @@ SRC = crt_node.c \
       ft_split.c \
       small_sort.c \
       oper.c \
+      ft_substr.c\
+      ft_strlen.c\
+      ft_strdup.c\
+      ft_strlcpy.c\
 
 OBJ = $(SRC:.c=.o)
 NAME = push_swap
