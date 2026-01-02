@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:55:23 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/01 19:35:52 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:04:42 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void pa(t_stack *a, t_stack *b)
 {
     if (!a || !b)
         return;
-    /* take top of b and push it onto a */
     push(b, a);
     write(1, "pa\n", 3);
 }
@@ -50,7 +49,6 @@ void pb(t_stack *a, t_stack *b)
 {
     if (!a || !b)
         return;
-    /* take top of a and push it onto b */
     push(a, b);
     write(1, "pb\n", 3);
 }

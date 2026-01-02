@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:45:25 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/01 20:09:29 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:04:28 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,18 @@ static char	**get_args(int argc, char **argv)
             return (NULL);
         return (res);
     }
-    /* multiple args mode - return pointer to argv[1] */
     res = &argv[1];
     (void)dummy;
-    /* caller should not free res when argc > 2 */
+
     return (res);
 }
 
 static int	build_stack(t_stack *a, char **nums, int argc)
 {
-    int				i; long val; char *endptr; sorted_list *node;
+    int				i; 
+    long val;
+     char *endptr;
+      sorted_list *node;
     i = 0;
     while (nums[i])
     {
@@ -65,16 +67,23 @@ static int	build_stack(t_stack *a, char **nums, int argc)
 
 int	main(int argc, char **argv)
 {
-    t_stack		a; t_stack b;
+    t_stack		a; 
+    t_stack b;
     char		**nums;
-    int			ret; int i;
+    int			ret; 
+    int i;
 
     if (argc < 2)
         return (0);
     nums = get_args(argc, argv);
     if (!nums)
         return (0);
-    validate_args(nums);
+    if (validate_args(nums))
+    {
+        if (argc == 2)
+            error_free(nums);
+        error_exit();
+    }
     a.top = NULL; a.size = 0; b.top = NULL; b.size = 0;
     ret = build_stack(&a, nums, argc);
     if (argc == 2)
@@ -84,7 +93,15 @@ int	main(int argc, char **argv)
             free(nums[i++]);
         free(nums);
     }
-    assign_indexes(&a); if (a.size && !is_sorted(&a) && a.size <= 3)
-        sort_small_stack(&a);
+    assign_indexes(&a); 
+    if (a.size && !is_sorted(&a))
+    {
+        if (a.size <= 5)
+            sort_small_stack(&a , &b);
+        else
+            radix_sort(&a, &b);
+    }
+    free_stack(&a);
+    free_stack(&b);
     return (0);
 }

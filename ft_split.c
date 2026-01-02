@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 19:40:50 by oalhasan          #+#    #+#             */
-/*   Updated: 2025/12/19 19:09:16 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:03:59 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,13 +89,3 @@ char	**ft_split(char const *s, char c)
 	return (fill_words(result, s, c));
 }
 
-// int	main(void)
-// {
-// 	char	**str;
-// 	int		i;
-
-// 	str = ft_split("",' ');
-// 	printf("--%s\n",str[0]);
-// 	printf("--%s\n",str[1]);
-// 	free(str);
-// }

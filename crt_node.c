@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:51:47 by oalhasan          #+#    #+#             */
-/*   Updated: 2025/12/27 15:50:56 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:03:36 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,12 +153,30 @@ int	is_sorted(t_stack *stack)
 
 void	print_stack(t_stack *stack)
 {
-	sorted_list	*tmp = stack->top;
+    sorted_list	*tmp = stack->top;
 	while (tmp)
 	{
 		printf("value: %d index: %d\n", tmp->value, tmp->index);
 		tmp = tmp->next;
 	}
+}
+
+void	free_stack(t_stack *stack)
+{
+    sorted_list *tmp;
+    sorted_list *next;
+
+    if (!stack)
+        return;
+    tmp = stack->top;
+    while (tmp)
+    {
+        next = tmp->next;
+        free(tmp);
+        tmp = next;
+    }
+    stack->top = NULL;
+    stack->size = 0;
 }
 
 

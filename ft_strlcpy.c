@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 22:01:03 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/01 19:54:06 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:04:08 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (srclen);
 }
-// int main()
-// {
-//     char  d[100] = "";
-//     char  s[] = "lorem ipsum";
-//     char x = ft_strlcpy(d,s,3);
-//     printf("%d" ,x);
 
-// }
