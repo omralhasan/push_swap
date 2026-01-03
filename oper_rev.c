@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   oper_rev.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 01:35:12 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/02 20:03:14 by oalhasan         ###   ########.fr       */
+/*   Created: 2026/01/03 19:00:00 by oalhasan          #+#    #+#             */
+/*   Updated: 2026/01/03 22:35:32 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*ft_strdup(const char *s)
+void	rra(t_stack *a)
 {
-	char	*x;
-	size_t	len;
+	if (!a)
+		return ;
+	reverse_rotate(a);
+	write(1, "rra\n", 4);
+}
 
-	len = ft_strlen(s);
-	x = (char *)malloc(len + 1);
-	if (!x)
-		return (NULL);
-	ft_strlcpy(x, s, len + 1);
-	return (x);
+void	rrb(t_stack *b)
+{
+	if (!b)
+		return ;
+	reverse_rotate(b);
+	write(1, "rrb\n", 4);
+}
+
+void	rrr(t_stack *a, t_stack *b)
+{
+	if (a)
+		reverse_rotate(a);
+	if (b)
+		reverse_rotate(b);
+	write(1, "rrr\n", 4);
 }

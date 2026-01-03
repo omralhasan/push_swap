@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   push_lowest.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 01:35:12 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/02 20:03:14 by oalhasan         ###   ########.fr       */
+/*   Created: 2026/01/03 19:49:57 by oalhasan          #+#    #+#             */
+/*   Updated: 2026/01/03 22:35:32 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*ft_strdup(const char *s)
+int	push_lowest(t_stack *a, t_stack *b, int target_count)
 {
-	char	*x;
-	size_t	len;
+ 	int	pos;
 
-	len = ft_strlen(s);
-	x = (char *)malloc(len + 1);
-	if (!x)
-		return (NULL);
-	ft_strlcpy(x, s, len + 1);
-	return (x);
+    if (!a || !b)
+        return (0);
+    while (target_count > 0)
+    {
+        pos = find_pos_by_index(a, target_count - 1);
+        if (pos == -1)
+            return (0);
+        rotate_to_pos(a, pos);
+        pb(a, b);
+        target_count--;
+    }
+    return (1);
 }

@@ -88,4 +88,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_words(result, s, c));
 }
-
