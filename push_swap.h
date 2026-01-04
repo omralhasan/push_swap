@@ -69,10 +69,11 @@ int							find_pos_by_index(t_stack *a, int target);
 int							push_value(t_stack *a, char *s, int argc);
 void						free_split(char **nums);
 void						rotate_to_pos(t_stack *a, int pos);
-char						*ft_substr(char const *s, unsigned int start,size_t len);
+char						*ft_substr(char const *s, unsigned int start,
+								size_t len);
 size_t						ft_strlen(const char *s);
 char						*ft_strdup(const char *s);
-size_t						ft_strlcpy(char *dst, const char *src,size_t size);
+size_t						ft_strlcpy(char *dst, const char *src, size_t size);
 int							push_lowest(t_stack *a, t_stack *b,
 								int target_count);
 void						sort_four_five(t_stack *a, t_stack *b);

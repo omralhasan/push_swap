@@ -14,7 +14,7 @@
 
 static int	get_max_index(t_stack *a)
 {
-	int			max_index;
+	int				max_index;
 	t_sorted_list	*cur;
 
 	max_index = 0;
@@ -66,19 +66,3 @@ void	radix_sort(t_stack *a, t_stack *b)
 		i++;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

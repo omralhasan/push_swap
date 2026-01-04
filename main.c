@@ -37,7 +37,7 @@ static char	**get_args(int argc, char **argv)
 
 static int	build_stack(t_stack *a, char **nums, int argc)
 {
-	int					i;
+	int	i;
 
 	i = 0;
 	while (nums[i])

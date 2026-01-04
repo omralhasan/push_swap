@@ -52,4 +52,3 @@ void	rotate_to_pos(t_stack *a, int pos)
 			rra(a);
 	}
 }
-

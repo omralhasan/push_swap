@@ -36,4 +36,3 @@ void	rr(t_stack *a, t_stack *b)
 		rotate(b);
 	write(1, "rr\n", 3);
 }
-

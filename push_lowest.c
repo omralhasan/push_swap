@@ -14,18 +14,18 @@
 
 int	push_lowest(t_stack *a, t_stack *b, int target_count)
 {
- 	int	pos;
+	int	pos;
 
-    if (!a || !b)
-        return (0);
-    while (target_count > 0)
-    {
-        pos = find_pos_by_index(a, target_count - 1);
-        if (pos == -1)
-            return (0);
-        rotate_to_pos(a, pos);
-        pb(a, b);
-        target_count--;
-    }
-    return (1);
+	if (!a || !b)
+		return (0);
+	while (target_count > 0)
+	{
+		pos = find_pos_by_index(a, target_count - 1);
+		if (pos == -1)
+			return (0);
+		rotate_to_pos(a, pos);
+		pb(a, b);
+		target_count--;
+	}
+	return (1);
 }

@@ -23,7 +23,6 @@ void	sort_two(t_stack *stack)
 		sa(stack);
 }
 
-
 void	sort_small(t_stack *stack, t_stack *b)
 {
 	if (!stack)
