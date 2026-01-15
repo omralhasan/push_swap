@@ -95,4 +95,4 @@ If you have an external checker program available (not included in this reposito
 
 - Used for: (debugging help, explanations)
 - Affected parts: (memory management review)
-- Not used for: <what_it_did_not_do> (auto-generating the full project)
+- Not used for: (auto-generating the full project)
