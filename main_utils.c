@@ -6,34 +6,36 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 19:49:57 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/03 22:35:32 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:33:26 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <errno.h>
 
 int	push_value(t_stack *a, char *s, int argc)
 {
-	long			val;
-	char			*endptr;
+	int				val;
+	int				i;
 	t_sorted_list	*node;
 
-	errno = 0;
-	val = strtol(s, &endptr, 10);
-	if (*endptr != '\0' || errno == ERANGE || val < INT_MIN || val > INT_MAX)
-	{
-		if (argc == 2)
-			error_free(&s);
+	(void)argc;
+	i = 0;
+	if (s[i] == '-' || s[i] == '+')
+		i++;
+	if (!s[i])
 		error_exit();
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+			error_exit();
+		i++;
 	}
-	node = new_node((int)val);
+	val = ft_atoi(s);
+	if (val < -2147483648 || val > 2147483647)
+		error_exit();
+	node = new_node(val);
 	if (!node)
-	{
-		if (argc == 2)
-			error_free(&s);
 		error_exit();
-	}
 	push_bottom(a, node);
 	return (1);
 }

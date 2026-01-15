@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 19:00:00 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/03 22:35:32 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:35:03 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,19 @@ void	rotate_to_pos(t_stack *a, int pos)
 	half = size / 2;
 	if (pos <= half)
 	{
-		while (pos-- > 0)
+		while (pos > 0)
+		{
 			ra(a);
+			pos--;
+		}
 	}
 	else
 	{
 		pos = size - pos;
-		while (pos-- > 0)
+		while (pos > 0)
+		{
 			rra(a);
+			pos--;
+		}
 	}
 }

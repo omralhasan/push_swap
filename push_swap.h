@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:46:34 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/03 22:38:09 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:32:15 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void						error_exit(void);
 void						error_free(char **args);
 int							is_valid_number(char *str);
 int							validate_args(char **args);
-
 void						push(t_stack *from, t_stack *to);
 int							pop(t_stack *stack);
 int							is_sorted(t_stack *stack);
@@ -78,5 +77,6 @@ int							push_lowest(t_stack *a, t_stack *b,
 								int target_count);
 void						sort_four_five(t_stack *a, t_stack *b);
 void						radix_sort(t_stack *a, t_stack *b);
+int							ft_atoi(const char *nptr);
 
 #endif

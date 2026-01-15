@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 18:45:25 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/03 22:38:53 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:39:31 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 static char	**get_args(int argc, char **argv)
 {
 	char	**res;
-	int		dummy;
 
-	dummy = 0;
 	if (argc < 2)
 	{
 		return (NULL);
@@ -31,7 +29,6 @@ static char	**get_args(int argc, char **argv)
 		return (res);
 	}
 	res = &argv[1];
-	(void)dummy;
 	return (res);
 }
 

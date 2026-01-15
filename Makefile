@@ -19,7 +19,8 @@ SRC = crt_node.c \
       ft_strlen.c\
       ft_strdup.c\
       ft_strlcpy.c\
-      radix.c
+      radix.c\
+      ft_atoi.c
 
 OBJ = $(SRC:.c=.o)
 NAME = push_swap

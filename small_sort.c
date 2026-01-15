@@ -6,14 +6,11 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 15:58:10 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/03 22:40:02 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:36:57 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int		find_pos_by_index(t_stack *a, int target);
-void	rotate_to_pos(t_stack *a, int pos);
 
 void	sort_two(t_stack *stack)
 {
