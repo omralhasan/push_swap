@@ -6,7 +6,7 @@
 /*   By: oalhasan <oalhasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 15:58:10 by oalhasan          #+#    #+#             */
-/*   Updated: 2026/01/15 18:36:57 by oalhasan         ###   ########.fr       */
+/*   Updated: 2026/01/19 13:56:25 by oalhasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,6 @@ void	sort_four_five(t_stack *a, t_stack *b)
 	sort_three(a);
 	while (b->size > 0)
 		pa(a, b);
+	if (a->top->value > a->top->next->value)
+		sa(a);
 }
